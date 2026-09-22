@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: rps-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    plan: free
+    envVars:
+      - key: RUBIKA_TOKEN
+        sync: false
